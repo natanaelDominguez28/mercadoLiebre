@@ -1,0 +1,140 @@
+body{
+    background-color: #EAC926;
+    font-family: Roboto;
+}
+
+main{
+    width: 90%;
+}
+
+form{
+    display: inline-block;
+}
+
+form input{
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+form button{
+    width: 100%;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+}
+
+button{
+    width: 20px;
+    height: 20px;
+}
+
+button i{
+    font-size: 10px;
+    align-self: center;
+}
+
+.cuerpo-de-texto{
+    font-size: 12px;
+}
+
+nav ul li i{
+    font-size: 2em;
+}
+
+.icon-list{
+    text-align: center;
+}
+
+.burger-menu{
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: blue;
+}
+
+.titulo{
+    font-size: 24px;
+}
+
+.precio{
+    font-size: 18px;
+}
+
+.descuento{
+    font-size: 16px;
+}
+
+.descripcion{
+    font-size: 16px;
+}
+
+ul li{
+    display: block;
+}
+/*footer*/
+article{
+    text-align: center;
+}
+
+article i{
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+@media(min-width: 570px){
+    
+}
+
+/* medidas de pantallas para media queries
+576
+768
+992
+1200
+*/
+
+/*
+.contenedor01{
+    width:90%;
+    background-color:pink;
+    color:black;
+}
+.contenedor02{
+    width:50%;
+    background-color:pink;
+    color:white;
+*/
+
+/*@media(min-width: 576px){
+    .contenedor01, contenedor02{
+        width: 70%;
+        margin:auto;
+    }
+}
+*/
+/*@media(min-width: 768px){
+    .contenedor01{
+        background-color:ligthblue;
+        color:black;
+    }
+    .contenedor02{
+        background-color:red;
+        color:white;
+    }
+}
+*/
+/*@media(min-width: 992px){
+    .contenedor01, .contenedor02{
+        border: solid black 10px;
+    }
+}
+*/
+/*@media(min-width: 1200px){
+    .contenedor01, contenedor02{
+        max-width: 1100px
+    }
+}
+*/
+
