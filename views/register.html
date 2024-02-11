@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,42 +9,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Registro</title>
 </head>
+
 <body>
-    <header>
-        <div class="top-header">
-            <div class="logo"> 
-                <img src="images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
+    <header class="main-header">
+        <div class="main-header-top-bar">
+            <img src="/images/logo-mercado-liebre.svg" class="logo">
+            <div>
+                <form>
+                    <input type="text" placeholder="Buscar productos, marcas y mas">
+                    <button><i class="fas fa-search"></i></button>
+                </form>
             </div>
-            <form class="form" action="#" method="GET">
-                <input type="text" placeholder="Buscar productos, marcas y más">
-                <button class="submit"><i class="fa fa-search"></i></button>
-            </form>
-            <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+            <h2 class="copy-header"><i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito
+            </h2>
         </div>
-        <nav>
-            <ul>
+
+        <a href="#" class="hamburguer-button">
+            <i class="fas fa-bars"></i>
+        </a>
+
+        <nav class="main-navbar">
+            <ul class="left-navbar">
                 <li><a href="#">Ofertas</a></li>
                 <li><a href="#">Tiendas Oficiales</a></li>
                 <li><a href="#">Vender</a></li>
                 <li><a href="#">Ayuda</a></li>
             </ul>
-            <ul>
-                <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+
+            <ul class="right-navbar">
+                <li><a href="/register">Creá tu cuenta <i class="fas fa-address-card"></i></a></li>
                 <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
                 <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
             </ul>
         </nav>
-        <div class="burger-menu">
-            <i class="fa fa-bars burger"></i>
-        </div>
     </header>
     <section class="banner">
         <img src="images/img-home-banner.jpg" alt="Banner de ofertas">
     </section>
     <main>
-        <section>
-            <hr>
-            <form>
+        <!--form>
                 <input type="text" placeholder="Nombre y Apellido">
                 <input type="text" placeholder="Nombre de usuario">
                 <input type="email" placeholder="E-mail">
@@ -65,9 +69,59 @@
                 <input type="password" placeholder="Confirmá tu contraseña">
                 <button>Enviar</button>
                 <button>Borrar</button>
-            </form>
-            <hr>
-        </section>
+            </form-->
+        <!--Formulario-->
+        <form action="/home" method="post" class="create-form">
+            <div class="control-formulario">
+                <label>Nombre y Apellido</label>
+                <input type="text" name="nombre" class="control" placeholder="nombre y apellido">
+            </div>
+            <div class="control-formulario">
+                <label>Nombre de usuario</label>
+                <input type="text" name="nombre_usuario" class="control" placeholder="nombre de usuario">
+            </div>
+            <div class="control-formulario">
+                <label>Email</label>
+                <input type="email" name="mail" class="control" placeholder="nombre@email.com">
+            </div>
+            <div class="control-formulario">
+                <label>Fecha de Nacimiento</label>
+                <input type="date" name="fecha_nac" class="control">
+            </div>
+            <div class="control-formulario">
+                <label>Domicilio</label>
+                <input type="text" name="domicilio" class="control" placeholder="Calle N° XXX, Barrio, Ciudad ">
+            </div>
+            <div class="control-formulario">
+                <label>Perfil</label>
+                <select name="perfil" class="control">
+                    <option value="comprador">Comprador</option>
+                    <option value="vendedor">Vendedor</option>
+                </select>
+            </div>
+            <div class="control-formulario">
+                <label>Categorías de Interés</label>
+                <label><input type="checkbox" value="electro">Electro</label>
+                <label><input type="checkbox" value="moda">Moda</label>
+                <label><input type="checkbox" value="hogar">Hogar</label>
+                <label><input type="checkbox" value="jugueteria">Juguetería</label>
+                <label><input type="checkbox" value="vida_sana">Vida Sana</label>
+            </div>
+            <div class="control-formulario">
+                <label>Foto de perfil</label>
+                <input type="file" name="foto_perfil">
+            </div>
+            <div class="control-formulario">
+                <label>Contraseña</label>
+                <input type="password" name="contraseña" class="control">
+            </div>
+            <div class="control-formulario">
+                <label>Confirmar contraseña</label>
+                <input type="password" name="confirm_password" class="control">
+            </div>
+            <button id="btnBorrar" type="reset" class="boton-formulario">Borrar</button>
+            <button type="submit" class="boton-formulario">Registrar</button>
+        </form>
     </main>
     <footer>
         <article>
@@ -91,10 +145,10 @@
                 porque estás siempre protegid@.</p>
             <br>
         </article>
-        <article>
+        <div class="copyright">
             <p>Copyright © 1999-2020 MercadoLiebre S.R.L.</p>
-            <br>
-        </article>
+        </div>
     </footer>
 </body>
+
 </html>
