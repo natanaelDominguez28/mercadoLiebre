@@ -1,6 +1,14 @@
+/*Paleta de colores
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+*/
 *{
     margin: 0px;
-    padding: 0px;    
+    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -9,93 +17,61 @@ body{
     background-color: #ebebeb;
 }
 
-h3{
-    font-size: 24px;
-}
-
-p{
-    font-size: 12px;
-}
-
-div.top-header{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 5%;
-}
-
-header div.top-header p{
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
-}
-
-header{
+.main-header{
     background-color: #EAC926;
+    padding: 20px;
+    top: 0;
+    width: 100%;
 }
 
-header div.logo,
-header .form{
-    width: 50%;
+.main-header .main-header-top-bar .barra_busqueda form input{
+    width: 100%;
+    margin: auto;
 }
-
-header div.logo{
-    padding: 10px;
-}
-header .form{
-    display: flex;
-    align-items: center;
-    padding: 2px;
-    font-size: 11px;
-}
-header nav{
-    font-size: 12px;
-    margin-left: 20px;
-}
-
-header ul li{
-    list-style-type: none;
-    display: inline;
-}
-
-header ul li a{
-    text-decoration: none;
-    color: #000;
-    
-}
-
-header ul li i{
-    color: #1259c3
-}
-
-header .form .input{
-    background-color:#FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
-}
-
-header .form .submit{
-    background-color: #1259c3;
-    border: 1px solid #000;
-    color: white;
-    width: 10%;
-}
-
-div.burger-menu{
-    text-align: center;
+.hamburguer-button{
+    background-color: #03264C;
+    color: #ffffff;
     display: none;
+    max-width: 50px;
+    padding: 15px 0;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    margin: auto;
 }
 
-div.burger-menu i{
-    background-color: #0044AA;
-    border-radius: 5px;
-    color: #FFF;
-    font-size: 20px;
-    height: 40px;
-    margin: 10px 0px 20px 0px;
-    padding: 10px;
-    width: 40px;
+.logo{
+    width: 200px;
+}
+
+section.banner img{
+    width: 100%;
+}
+
+.copy-header {
+    font-weight: 400;
+    text-align: center;
+}
+
+.main-navbar{
+    display: flex;
+    max-width: none;
+    justify-content: space-between;
+}
+
+.main-navbar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-navbar a {
+    text-decoration: none;
+    color: #222222;
+    padding: 5px 0;
+    margin-right: 10px;
+    font-size: 17px;
 }
 
 div.last-visit,
@@ -180,18 +156,93 @@ article div.main-article{
     padding: 15px;
 }
 
-@media (min-width: 361px){
+article:hover .fa-truck {
+    transform: rotate(-90deg);
+}
 
+/*estilos para los formularios*/
+.create-form{
+    padding: 20px 15px;
+    width: 90%;
+    border: 3px solid #ebebeb;
+    margin: auto;
+}
+
+.control-formulario{
+    margin-bottom: 15px;
+}
+
+.control-formulario label{
+    margin-bottom: 5px;
+    font-style: italic;
+    display: block;
+}
+
+.control{
+    width: 100%;
+    padding: 8px;
+}
+
+.boton-formulario{
+    background-color: #1259c3;
+    border: none;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.boton-formulario:hover{
+    background-color: #0022AA;
+}
+
+#btnBorrar{
+    background-color: red;
+}
+
+/*footer*/
+footer{
+    background-color: #ffffff;
+    margin-top: 10px;
+    padding-top: 10px;
+    margin-bottom: 0;   
+}
+
+footer article{
+    display: block;
+    text-align: center;
+}
+
+footer article i{
+    font-size: 2em;
+    margin-bottom: 10px;
+    color:#1259c3;
+}
+
+footer article i:hover{
+    color:#0022AA;
+}
+
+footer .copyright{
+    display: flex;
+}
+
+/*media queries*/
+@media (min-width: 361px){
     header ul li {
         display: none;
     }
 
-    div.burger-menu{
-        text-align: center;
-        display: block;
+    a{
+        text-decoration: none;
     }
-    
-    div.burger-menu i{
+
+    .main-header-top-bar{
+        display: inline-block
+    }
+
+    .hamburguer-button{
+        display: flex;
         background-color: #0044AA;
         border-radius: 5px;
         color: #FFF;
@@ -200,7 +251,9 @@ article div.main-article{
         margin: 10px 0px 20px 0px;
         padding: 10px;
         width: 40px;
+        margin: auto;
     }
+
     main section article .description{
         display: block;
     }
@@ -225,103 +278,32 @@ article div.main-article{
     .discount{
         width: 50%;
     }
+
+    footer{
+        display: block;
+    }
 }
 
 @media (min-width: 769px){
     header ul li{
-        display: block;
+        display: flex;
+        margin-top: 20px;
     }
 
-    div.burger-menu{
-        text-align: center;
+    .hamburguer-button{
         display: none;
     }
-    
-    div.burger-menu i{
-        background-color: #0044AA;
-        border-radius: 5px;
-        color: #FFF;
-        font-size: 20px;
-        height: 40px;
-        margin: 10px 0px 20px 0px;
-        padding: 10px;
-        width: 40px;
+
+    .main-header-top-bar{
+        display: flex;
+        justify-content: space-between;
     }
 
     main section div.products article{
         width: 22%;
     }
-}
-/*footer*/
-footer{
-    display: flex;
-}
 
-article{
-    text-align: center;
-}
-
-article i{
-    font-size: 2em;
-    margin-bottom: 10px;
-    color:#1259c3;
-}
-
-article:hover .fa-truck {
-    transform: rotate(-90deg);
-}
-
-@media(min-width: 570px){
-    
-}
-
-/* medidas de pantallas para media queries
-576
-768
-992
-1200
-*/
-
-/*
-.contenedor01{
-    width:90%;
-    background-color:pink;
-    color:black;
-}
-.contenedor02{
-    width:50%;
-    background-color:pink;
-    color:white;
-*/
-
-/*@media(min-width: 576px){
-    .contenedor01, contenedor02{
-        width: 70%;
-        margin:auto;
+    footer{
+        display: flex;
     }
 }
-*/
-/*@media(min-width: 768px){
-    .contenedor01{
-        background-color:ligthblue;
-        color:black;
-    }
-    .contenedor02{
-        background-color:red;
-        color:white;
-    }
-}
-*/
-/*@media(min-width: 992px){
-    .contenedor01, .contenedor02{
-        border: solid black 10px;
-    }
-}
-*/
-/*@media(min-width: 1200px){
-    .contenedor01, contenedor02{
-        max-width: 1100px
-    }
-}
-*/
-
